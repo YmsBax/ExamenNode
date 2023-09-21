@@ -1,7 +1,4 @@
-import mongoose,{mongoose,Schema,model} from "mongoose";
-
-
-export default model ('empleado',empleadoSchema);
+const {mongoose,Schema,model} = require("mongoose");
 
 const empleadoSchema = new Schema ( {
     nombre:{
@@ -25,3 +22,5 @@ const empleadoSchema = new Schema ( {
         require: [true, 'Campo requerido']
     }
 })
+
+module.exports = model ('empleado',empleadoSchema);
