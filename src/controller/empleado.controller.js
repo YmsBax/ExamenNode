@@ -2,7 +2,7 @@ const empleadoModel = require('../model/empleado.model');
 
 //Create (post)
 exports.postEmpleado = async(req,res)=>{
-    const newEmpleado = new empleadoModel({id: req.body.id})
+    const newEmpleado = new empleadoModel({nombre: req.body.nombre, apellido: req.body.apellido, edad: req.body.edad, cedula: req.body.cedula})
     const empleadoSave = newEmpleado.save();
     res.json({empleadoSave});
 }
